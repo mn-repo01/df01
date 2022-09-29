@@ -1,0 +1,9 @@
+{
+	"name": "raykol-df01",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bbe366b3-6f3b-4cf6-abda-153f4ed2cf45",
+		"tenantId": "9c9021d4-cb21-4e1e-a2c8-2bbce91d4d06"
+	}
+}
