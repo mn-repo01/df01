@@ -7,6 +7,10 @@
 		},
 		"annotations": [],
 		"type": "GoogleBigQueryObject",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"dataset": "commerce",
+			"table": "order_items"
+		}
 	}
 }
