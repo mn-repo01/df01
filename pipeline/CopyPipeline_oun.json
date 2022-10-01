@@ -1,0 +1,303 @@
+{
+	"name": "CopyPipeline_oun",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_oun",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "public.IOWA-LIQUOR"
+					},
+					{
+						"name": "Destination",
+						"value": "ml01.IOWA-LIQUOR"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "PostgreSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "invoice_line_no",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "invoice_line_no",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"name": "date",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "store",
+									"type": "String"
+								},
+								"sink": {
+									"name": "store",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "city",
+									"type": "String"
+								},
+								"sink": {
+									"name": "city",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "store_location",
+									"type": "String"
+								},
+								"sink": {
+									"name": "store_location",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "county_number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "county_number",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "county",
+									"type": "String"
+								},
+								"sink": {
+									"name": "county",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "category",
+									"type": "String"
+								},
+								"sink": {
+									"name": "category",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "category_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "category_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "vendor_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "vendor_no",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "vendor_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "vendor_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "itemno",
+									"type": "String"
+								},
+								"sink": {
+									"name": "itemno",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "im_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "im_desc",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pack",
+									"type": "String"
+								},
+								"sink": {
+									"name": "pack",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "bottle_volume_ml",
+									"type": "String"
+								},
+								"sink": {
+									"name": "bottle_volume_ml",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "state_bottle_cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "state_bottle_cost",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "state_bottle_retail",
+									"type": "String"
+								},
+								"sink": {
+									"name": "state_bottle_retail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "sale_bottles",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sale_bottles",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "sale_dollars",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sale_dollars",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "sale_liters",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sale_liters",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "sale_gallons",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sale_gallons",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_oun",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_oun",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
