@@ -1,0 +1,16 @@
+{
+	"name": "SourceDataset_oun",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PostgreSql1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "PostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "IOWA-LIQUOR"
+		}
+	}
+}
